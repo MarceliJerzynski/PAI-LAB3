@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <!-- <script type="text/javascript" src="form-check.js"></script>  -->
+    <title>PAI - Lab3 - Marceli Jerzynski </title>
+</head>
+
+<body>
+
+    <table id="table1">
+        <tbody>
+            <tr>
+                <td>Wiersz 1</td>
+            </tr>
+            <tr>
+                <td>Wiersz 2</td>
+            </tr>
+            <tr>
+                <td>Wiersz 3</td>
+            </tr>
+            <tr>
+                <td>Wiersz 4</td>
+            </tr>
+            <tr>
+                <td>Wiersz 5</td>
+            </tr>
+            <tr>
+                <td>Wiersz 6</td>
+            </tr>
+            <tr>
+                <td>Wiersz 7</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <input type="button" value="Kliknij żeby zamienić" onclick="swapRows(this)"></td>
+
+    <form name="personal_data">
+        <table>
+            <tr>
+                <td>Imię*</td>
+                <td><input type="text" name="f_name"></td>
+                <td><span class="err" id="e_name"></span></td>
+            </tr>
+            <tr>
+                <td>Nazwisko*</td>
+                <td><input type="text" name="f_surname"></td>
+                <td><span class="err" id="e_surname"></span></td>
+            </tr>
+            <tr>
+                <td>Płeć</td>
+                <td>
+                    <input name="f_sex" value="f_f" type="radio" onClick="showElement('maiden_name_id')"
+                        checked />kobieta<br />
+                    <input name="f_sex" value="f_m" type="radio" onclick="hideElement('maiden_name_id')" />mężczyzna
+                </td>
+            </tr>
+            <tr id="maiden_name_id">
+                <td>N. panieńskie</td>
+                <td><input type="text" name="f_maiden_name"></td>
+            </tr>
+            <tr>
+                <td>E-mail*</td>
+                <td><input type="text" name="f_email"></td>
+                <td><span class="err" id="e_email"></span></td>
+            </tr>
+            <tr>
+                <td>Kod pocztowy*</td>
+                <td><input type="text" name="f_zip_code"></td>
+                <td><span class="err" id="e_zip_code"></span></td>
+            </tr>
+            <tr>
+                <td>Ulica/Osiedle*</td>
+                <td><input type="text" name="f_street"></td>
+                <td><span class="err" id="e_street"></span></td>
+            </tr>
+            <tr>
+                <td>Miasto*</td>
+                <td><input type="text" name="f_city"></td>
+                <td><span class="err" id="e_city"></span></td>
+            </tr>
+            <!-- <tr>
+                <td>Uwagi</td>
+                <td><textarea rows="5" cols="15" name="comments"></textarea>
+                </td>
+            </tr>
+            <tr> -->
+                <td>Uwagi</td>
+                <td>
+                    <textarea rows="5" cols="15" name="comments"
+                        onkeyup="cnt(this.form.comments, document.getElementById('left'), 150)"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Pozostało <span id="left">150</span> znaków</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Prześlij" onclick = "return validate(this.form)"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script type="text/javascript" src="form-check.js"></script>
+</body>
+
+
+</html>
